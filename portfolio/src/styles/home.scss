@@ -142,3 +142,20 @@ p {
   text-align: center;
   border-radius: 25px;
 }
+
+.footer-text {
+    color: wheat;
+    font-size: calc(5px + 0.5vw);
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.footer-icons  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
