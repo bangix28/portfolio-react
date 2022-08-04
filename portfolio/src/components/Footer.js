@@ -10,7 +10,10 @@ const Footer = () => {
                 </div>
                 <div className={"footer-icons"}>
                     <a target={"_blank"} href={"https://www.linkedin.com/in/k%C3%A9nolane-granger-95b7a6181/"}>
-                        <i className="fa-brands fa-linkedin fa-2xl"></i>
+                        <i className="fa-brands icon fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a target={"_blank"} href={"https://github.com/bangix28"}>
+                        <i className="fa-brands icon fa-github fa-2xl"></i>
                     </a>
                 </div>
             </div>

@@ -39,11 +39,6 @@ p {
   height: auto;
 }
 
-.icon-arrow-down {
-
-}
-
-
 .title-header {
   //create responsive title header
 
@@ -143,7 +138,7 @@ p {
   border-radius: 25px;
 }
 
-.footer-text {
+.footer-text p{
     color: wheat;
     font-size: calc(5px + 0.5vw);
     text-align: center;
@@ -152,10 +147,8 @@ p {
 }
 .footer-icons  {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 5vh;
-    width: 100%;
-    top: 0;
-    left: 0;
+    justify-content: center;
+}
+.icon {
+  margin-right: 10px;
 }
