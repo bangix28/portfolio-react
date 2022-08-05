@@ -1,9 +1,14 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../styles/home.scss'
 import {useSpring, animated, config} from 'react-spring'
 
 
-const Home = () => {
+const Home = (title) => {
+
+    console.log(title);
+    useEffect(() => {
+        document.title = title[0]
+    }, [title]);
 
     const [flip, set] = useState(false)
     function AppearAnimation(animation_delay) {
