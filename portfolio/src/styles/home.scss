@@ -116,10 +116,6 @@ p {
   border-radius: 10px;
 }
 
-.card-image {
-  padding: 2vh;
-}
-
 .card-title{
   font-size: 25px;
   font-family: 'Overpass', sans-serif;
@@ -151,4 +147,20 @@ p {
 }
 .icon {
   margin-right: 10px;
+}
+
+article {
+  margin-left: 30vh;
+  margin-right: 30vh;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.article-title {
+  text-align: center;
 }
