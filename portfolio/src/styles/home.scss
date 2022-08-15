@@ -107,10 +107,10 @@ p {
 }
 
 .card {
-  flex: 0 1 calc(23% - 1em);
+  flex: 0 1 calc(24% - 1em);
   max-height: 500px;
   margin: 10px 25px 25px 5px;
-  padding: 25px;
+  padding: 10px;
   background-color: whitesmoke;
   border: solid 2px wheat;
   border-radius: 10px;
@@ -126,12 +126,18 @@ p {
     font-size: 100%;
 }
 
+
+.card-content a, .card-content a:hover, .card-content a:focus, .card-content a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .card-image-responsive {
   //put image in the top of the card and make it responsive
   width: 100%;
   height: auto;
   text-align: center;
-  border-radius: 25px;
 }
 
 .footer-text p{
