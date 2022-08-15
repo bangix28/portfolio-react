@@ -1,37 +1,40 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../components/Header";
-import Cards from "../components/Cards";
 import Footer from "../components/Footer";
+import {db} from "../firebase.config";
+import Cards from "../components/Cards";
 
 
 const Acceuil = () => {
+    //getting data from firebase and setting it to state variable for foreach loop
+const [data, setData] = useState([]);
+    useEffect(() => {
+            db.collection("articles").get().then(snapshot => {
+                const data = snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setData(data);
+            }).catch(error => {
+                console.log(error);
+            })
+        }
+        , []);
 
     useEffect(() => {
         document.title = "Acceuil"
     }, []);
-
-    let data = [
-        {
-            title: "Web Development",
-            text: "I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.",
-            image: "https://dummyimage.com/1920x1080/fff/aaa\\n"
-        },
-        {
-            title: "Web Design I am a web designer with a passion for designing web applications. I have a background in computer science and I am",
-            text: "I am a web designer with a passion for designing web applications. I have a background in computer science and I am currently working on my own projects.  I am a web designer with a passion for designing web applications. I have a background in computer science and I am currently working on my own projects.",
-            image: "https://dummyimage.com/1920x1080/fff/aaa\\n"
-
-        }
-    ]
 
     return (
         <div className={"page-background"}>
             <Header/>
             <div className={"container"}>
                 <section className={"cards"}>
-                {data.map(cards => (
-                        <Cards key={cards.id} card={cards}/>
-                ))}
+                    //create a map loop to display data from firebase  with cards component
+                    {data.map(item => (
+                        <Cards key={item.id} card={item}/>
+                    ))}
+
                 </section>
             </div>
             <Footer/>
