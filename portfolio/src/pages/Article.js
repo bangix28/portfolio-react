@@ -1,19 +1,28 @@
 import Header from "../components/Header";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Footer from "../components/Footer";
 import {useParams} from "react-router-dom";
+import {db, storage} from "../firebase.config";
 
 
 const Article = () => {
 
+    const [data, setData] = useState([]);
+    const [image, setImage] = useState(null);
     let articleId = useParams();
-    console.log(articleId);
 
-    let data = {
-        title: "Web Development",
-        text: "I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.I am a web developer with a passion for building web applications. I have a background in computer science and I am currently working on my own projects.",
-        image: "https://dummyimage.com/1920x1080/fff/aaa\\n"
-    }
+    useEffect(() => {
+        document.title = "Article"
+        db.collection("articles").doc(articleId.article).get().then(doc => {
+            console.log("test");
+            setData(doc.data());
+            storage.ref(doc.data().image).getDownloadURL().then(url => {
+                setImage(url);
+            });
+        })
+    }, []);
+
+
 
     return (
         <div className={"page-background"}>
@@ -21,13 +30,13 @@ const Article = () => {
             <div className={"container"}>
                 <article className={"article"}>
                     <div>
-                        <img className={"article-image"} src={data.image} alt={"image d'article"}/>
+                        <img className={"article-image"} src={image} alt={"image d'article"}/>
                     </div>
                     <div className={"article-title"}>
                         <h1>{data.title}</h1>
                     </div>
                     <div className={"article-text"}>
-                        <p>{data.text}</p>
+                        <p>{data.content}</p>
                     </div>
 
                 </article>
