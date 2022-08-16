@@ -6,24 +6,21 @@ import Cards from "../components/Cards";
 
 
 const Acceuil = () => {
-    //getting data from firebase and setting it to state variable for foreach loop
 const [data, setData] = useState([]);
     useEffect(() => {
+            document.title = "Acceuil"
+
             db.collection("articles").get().then(snapshot => {
-                const data = snapshot.docs.map(doc => ({
+                const listArticles = snapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                setData(data);
+                setData(listArticles);
             }).catch(error => {
                 console.log(error);
             })
         }
         , []);
-
-    useEffect(() => {
-        document.title = "Acceuil"
-    }, []);
 
     return (
         <div className={"page-background"}>
