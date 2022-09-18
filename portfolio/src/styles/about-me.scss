@@ -1,6 +1,5 @@
 .about-me {
   display: flex;
-  height: 90vh;
   flex: 1 1 100%;
   flex-direction: row;
   align-items: center;
@@ -38,4 +37,13 @@
 
 .about-me-content h2 {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
