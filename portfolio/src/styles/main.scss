@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,100&display=swap');
+
+
+@import "header";
+
+@import "cards";
+
+@import "footer";
+
+@import "articles";
+
+@import "home";
+
+@import "about-me.scss";
+
+.header {
+  padding: 25px;
+}
+
+
+h1 {
+  color: #A4BAB7;
+  padding: 0.5em 0.5em;
+  font-size: 35px;
+}
+
+h2 {
+  font-family: 'Overpass', sans-serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 85vh;
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 768px) {
+  .container {
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+
+
+.article-image {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.article-title {
+  text-align: center;
+}

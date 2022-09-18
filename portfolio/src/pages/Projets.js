@@ -5,10 +5,10 @@ import {db} from "../firebase.config";
 import Cards from "../components/Cards";
 
 
-const Acceuil = () => {
+const Projets = () => {
 const [data, setData] = useState([]);
     useEffect(() => {
-            document.title = "Acceuil"
+            document.title = "Projets"
 
             db.collection("articles").get().then(snapshot => {
                 const listArticles = snapshot.docs.map(doc => ({
@@ -23,11 +23,10 @@ const [data, setData] = useState([]);
         , []);
 
     return (
-        <div className={"page-background"}>
+        <div>
             <Header/>
             <div className={"container"}>
                 <section className={"cards"}>
-                    //create a map loop to display data from firebase  with cards component
                     {data.map(item => (
                         <Cards key={item.id} card={item}/>
                     ))}
@@ -40,5 +39,5 @@ const [data, setData] = useState([]);
 };
 
 
-export default Acceuil;
+export default Projets;
 

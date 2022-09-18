@@ -25,20 +25,20 @@ const Article = () => {
 
 
     return (
-        <div className={"page-background"}>
+        <div>
             <Header/>
-            <div className={"container"}>
+            <div className={"container-article"}>
+
                 <article className={"article"}>
                     <div>
-                        <img className={"article-image"} src={image} alt={"image d'article"}/>
+                        <h1 className={"article-title"}>{data.title}</h1>
                     </div>
-                    <div className={"article-title"}>
-                        <h1>{data.title}</h1>
+                    <div>
+                        <img className={"image-responsive"} src={image} alt={data.title}/>
                     </div>
-                    <div className={"article-text"}>
+                    <div className={"article-content"}>
                         <p>{data.content}</p>
                     </div>
-
                 </article>
             </div>
             <Footer/>
