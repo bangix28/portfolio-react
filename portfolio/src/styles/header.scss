@@ -1,0 +1,45 @@
+
+
+.title-header {
+//create responsive title header
+    color: #EFF2C0;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: #30343F;
+}
+
+.menu a, .menu a:hover, .menu a:focus, .menu a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.menu li{
+    text-decoration: none;
+    color: #EFF2C0;
+    display: inline-block;
+    padding: 0 50px;
+    font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    //create responsive header in mobile view
+    .header {
+        display: block;
+        text-align: center;
+    }
+    .menu {
+        display: block;
+        text-align: center;
+
+    }
+}
+

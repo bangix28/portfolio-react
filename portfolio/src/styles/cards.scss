@@ -1,0 +1,48 @@
+.cards {
+  display: flex;
+  flex: 1 1 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  flex: 0 1 calc(23%);
+  margin: 5px 10px 10px 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card-title{
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Overpass', sans-serif;
+  color: wheat;
+}
+.card-text p{
+  color: black;
+  font-size: 100%;
+}
+
+
+.card-content a, .card-content a:hover, .card-content a:focus, .card-content a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.card-image-responsive {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 0 1 auto;
+  }
+}
+
+

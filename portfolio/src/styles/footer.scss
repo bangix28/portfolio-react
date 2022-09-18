@@ -1,0 +1,23 @@
+.footer {
+  display: block;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: #30343F;
+}
+
+
+.footer-text p{
+  color: #EFF2C0;
+  font-size: calc(5px + 0.5vw);
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.footer-icons  {
+  display: flex;
+  justify-content: center;
+}
+.icon {
+  margin-right: 10px;
+}
