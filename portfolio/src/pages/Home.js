@@ -33,7 +33,7 @@ const Home = (title) => {
             <animated.div style={propsImage}><img className="img-home" alt="Image de Kénolane Granger" src="https://dummyimage.com/600x600/fff/aaa\n"/></animated.div>
             <animated.h1  style={propsTitle}>Kénolane Granger</animated.h1>
             <animated.p style={propsParagraph}>Développeur Web</animated.p>
-            <animated.a style={propsButton} href="/projets"><img src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-down.png"/></animated.a>
+            <animated.a style={propsButton} href="/acceuil"><img src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-down.png"/></animated.a>
         </div>
     );
 };
