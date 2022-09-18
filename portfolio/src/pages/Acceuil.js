@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import React, {useState} from "react";
 import Footer from "../components/Footer";
 import {useSpring, animated, config} from 'react-spring';
+import PhpIcon from '@mui/icons-material/Php';
 
 
 
@@ -27,26 +28,78 @@ const Acceuil = () => {
             <div className="container-about-me">
                 <article className="about-me">
                     <animated.div style={AppearAnimation(600)} className="image-about-me">
-                    <img  src="https://dummyimage.com/600x400/000/fff&text=Test" alt="images"/>
+                    <img src={require('../images/formation-symfony.png')} alt="images"/>
                     </animated.div>
                     <animated.div style={AppearAnimation(800)} className="about-me-content">
-                        <h2>Développeur PHP</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum mattis tellus, ac vehicula eros sodales sit amet. Etiam porta bibendum fermentum. Suspendisse sagittis, urna ac semper semper, nunc metus feugiat nibh, a commodo ex metus a urna. Suspendisse augue dolor, auctor sed purus in, vestibulum rhoncus elit. Nulla facilisi. Pellentesque sed fermentum augue. Proin vitae ligula sit amet magna fermentum auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse malesuada ipsum vitae orci eleifend tincidunt.
-
-                            Sed neque mauris, tincidunt id sem a, fermentum fermentum ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec justo turpis, feugiat vel mauris in, maximus faucibus urna. Aenean porttitor enim nec nibh rhoncus auctor. Donec a ipsum vel ipsum consectetur vestibulum. Phasellus nisl metus, viverra a lacinia tempus, fringilla ac metus. Etiam interdum, velit non pharetra tristique, lacus justo pretium enim, vel suscipit eros nulla ac arcu. Duis accumsan egestas ligula, a mattis risus imperdiet sit amet.</p>
+                        <h2>Qui suis je ?</h2>
+                        <p>
+                            Je m'appelle Kénolane Granger et je vous présente mon portfolio. Vous trouverez ici mes différents travaux d'école et projets personnels dans le domaine du développement web.<br/>
+                            Passionné d'informatique depuis mon adolescence, j'ai essayé toutes sortes de choses (3D, Création de jeux no-code, Montage matériel hardware, montage vidéo).
+                            <br/> Je suis vite tombé dans le code est plus en particulier le développement web.<br/>
+                            J'ai suivi le parcours d'Openclassrooms Développeur d'applications PHP/Symfony dans lequelle j'ai effectué 7 projets d'école (Wordpress, maquette de site, Blog PHP, Blog Symfony, API, Restful, mise à niveaux d'une MVP avec test unitaire).
+                        </p>
                     </animated.div>
                 </article>
                 <article className="about-me">
                     <animated.div style={AppearAnimation(800)} className="about-me-content">
-                        <h2>Développeur PHP</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum mattis tellus, ac vehicula eros sodales sit amet. Etiam porta bibendum fermentum. Suspendisse sagittis, urna ac semper semper, nunc metus feugiat nibh, a commodo ex metus a urna. Suspendisse augue dolor, auctor sed purus in, vestibulum rhoncus elit. Nulla facilisi. Pellentesque sed fermentum augue. Proin vitae ligula sit amet magna fermentum auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse malesuada ipsum vitae orci eleifend tincidunt.
-
-                            Sed neque mauris, tincidunt id sem a, fermentum fermentum ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec justo turpis, feugiat vel mauris in, maximus faucibus urna. Aenean porttitor enim nec nibh rhoncus auctor. Donec a ipsum vel ipsum consectetur vestibulum. Phasellus nisl metus, viverra a lacinia tempus, fringilla ac metus. Etiam interdum, velit non pharetra tristique, lacus justo pretium enim, vel suscipit eros nulla ac arcu. Duis accumsan egestas ligula, a mattis risus imperdiet sit amet.</p>
+                        <h2>Quelle est mon expérience professionnelle ?</h2>
+                        <p>
+                            Ma première expérience professionnelle dans le développement est mon alternance chez Comunica Organisation en tant que développeur web fullstack.<br/>
+                            J'ai travailer sur les sites <a href="https://www.preventica.com/"><strong>Préventica france</strong></a> et <a href="https://www.preventica.ma/"> <strong> Préventica Maroc</strong></a>.<br/>
+                            Les différentes tâches auxquelles j'ai été affecté étaient les suivantes :
+                            <ul>
+                                <li>Création de nouvelles fonctionnalités</li>
+                                <li>Consommation d'API</li>
+                                <li>Refactorisation de code</li>
+                                <li>Sécurisation des plateformes web</li>
+                                <li>Mise en place d'un environement de développement avec Docker</li>
+                                <li>Création d'UX avec Javascript</li>
+                                <li>... </li>
+                            </ul>
+                        </p>
                     </animated.div>
                     <animated.div style={AppearAnimation(600)} className="image-about-me">
-                        <img  src="https://dummyimage.com/600x400/000/fff&text=Test" alt="images"/>
+                        <img src={require('../images/logo-communica.png')} alt="images"/>
                     </animated.div>
-
+                </article>
+                <article className="about-me">
+                    <animated.div style={AppearAnimation(600)} className="image-about-me">
+                        <img src={require('../images/formation-symfony.png')} alt="images"/>
+                    </animated.div>
+                    <animated.div style={AppearAnimation(800)} className="about-me-content">
+                        <h2>Language et Framework</h2>
+                        <p>
+                            <ul>
+                                <li>
+                                    PHP <i className="fa-brands fa-php"></i>
+                                </li>
+                                <li>
+                                    Symfony <i className="fa-brands fa-symfony"></i>
+                                </li>
+                                <li>
+                                    Javascript <i className="fa-brands fa-square-js"></i>
+                                </li>
+                                <li>
+                                    HTML5 <i className="fa-brands fa-html5"></i>
+                                </li>
+                                <li>
+                                    CSS3 <i className="fa-brands fa-css3-alt"></i>
+                                </li>
+                                <li>
+                                    Yaml
+                                </li>
+                                <li>
+                                    Bootstrap <i className="fa-brands fa-bootstrap"></i>
+                                </li>
+                                <li>
+                                    Docker <i className="fa-brands fa-docker"></i>
+                                </li>
+                                <li>
+                                    Wordpress <i className="fa-brands fa-wordpress"></i>
+                                </li>
+                            </ul>
+                        </p>
+                    </animated.div>
                 </article>
             </div>
             <Footer/>
