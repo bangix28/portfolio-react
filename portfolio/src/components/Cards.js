@@ -1,7 +1,14 @@
 import * as React from "react";
-import {Image} from "react-bootstrap";
 import {storage} from "../firebase.config";
 import {useEffect, useState} from "react";
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import {CardActionArea} from "@mui/material";
+import {useHref} from "react-router-dom";
 
 
 const Cards = ({card}) => {
@@ -17,21 +24,37 @@ useEffect(() => {
 
     return (
             <article className={"card"}>
-                <div className={"card-image"}>
-                    <a href={"/article/"+ card.id}>
-                        <Image className={"card-image-responsive"} src={image} alt=""/>
-                    </a>
-                </div>
-                <div className={"card-content"}>
-                    <a href={"#"}>
-                    <div className={"card-title"}>
-                        <h3>{card.title.substring(0, 45)}</h3>
-                    </div>
-                    <div className={"card-text"}>
-                        <p>{card.content.substring(0, 185)}</p>
-                    </div>
-                    </a>
-                </div>
+                <Card sx={{
+                    width: {
+                        sx: 1.0, // 100%
+                        sm: 1.0,
+                        md: 325,
+                        lg: 500
+                    },
+                }}>
+                    <CardActionArea href={"/article/"+ card.id}>
+                    <CardMedia
+                        component="img"
+                        image={image}
+                        alt="green iguana"
+                    />
+                    <CardContent sx={{
+                        height: {
+                            sx: 1.0, // 100%
+                            sm: 1.0,
+                            md: 275,
+                            lg: 1.0
+                        },
+                    }}>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {card.title.substring(0, 45)}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            <p>{card.content.substring(0, 185)}</p>
+                        </Typography>
+                    </CardContent>
+                    </CardActionArea>
+                </Card>
             </article>
     );
 }
