@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/home.scss'
+import '../styles/main.scss'
 import {useSpring, animated, config} from 'react-spring'
 
 
 const Home = (title) => {
 
-    console.log(title);
     useEffect(() => {
         document.title = title[0]
     }, [title]);
@@ -31,10 +30,10 @@ const Home = (title) => {
 
     return (
         <div className="home-container">
-            <animated.div style={propsImage}><img className="img-responsive" alt="Image de Kénolane Granger" src="https://dummyimage.com/600x600/fff/aaa\n"/></animated.div>
+            <animated.div style={propsImage}><img className="img-home" alt="Image de Kénolane Granger" src="https://dummyimage.com/600x600/fff/aaa\n"/></animated.div>
             <animated.h1  style={propsTitle}>Kénolane Granger</animated.h1>
             <animated.p style={propsParagraph}>Développeur Web</animated.p>
-            <animated.a style={propsButton} href="acceuil"><img src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-down.png"/></animated.a>
+            <animated.a style={propsButton} href="/projets"><img src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-down.png"/></animated.a>
         </div>
     );
 };
